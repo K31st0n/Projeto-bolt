@@ -35,12 +35,12 @@ export default function LoginScreen() {
 const onSubmit = async (data: FormData) => {
   setLoading(true);
   try {
-    const response = await axios.post('http://localhost:3000/login', {
+    const resposta = await axios.post('http://127.0.0.1:5000/inserir', {
       email: data.email,
       password: data.password,
     });
 
-    if (response.status === 200) {
+    if (resposta.status === 200) {
       router.replace('/(tabs)');
     } else {
       setError('root', {
