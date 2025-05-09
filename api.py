@@ -7,6 +7,7 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)  # Permite requisições de outros domínios
 
+
 @app.route('/inserir', methods=['POST'])
 def inserir():
     try:
